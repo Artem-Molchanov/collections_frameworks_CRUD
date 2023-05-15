@@ -6,19 +6,19 @@ public class GameTest {
 
     Game game = new Game();
 
-@Test
+    @Test
     public void testWhenFirstPlayerWins() {
 
-    Player firstPlayer = new Player(1, "Firstplayer", 10);
-    Player secondPlayer = new Player(2, "Secondplayer", 5);
+        Player firstPlayer = new Player(1, "Firstplayer", 10);
+        Player secondPlayer = new Player(2, "Secondplayer", 5);
 
-    game.register(firstPlayer);
-    game.register(secondPlayer);
+        game.register(firstPlayer);
+        game.register(secondPlayer);
 
-    int actual = game.round("Firstplayer", "Secondplayer");
-    int expected = 1;
+        int actual = game.round("Firstplayer", "Secondplayer");
+        int expected = 1;
 
-    Assertions.assertEquals(actual,expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
@@ -34,7 +34,7 @@ public class GameTest {
         int actual = game.round("Firstplayer", "Secondplayer");
         int expected = 2;
 
-        Assertions.assertEquals(actual,expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
@@ -50,7 +50,7 @@ public class GameTest {
         int actual = game.round("Firstplayer", "Secondplayer");
         int expected = 0;
 
-        Assertions.assertEquals(actual,expected);
+        Assertions.assertEquals(actual, expected);
 
     }
 
